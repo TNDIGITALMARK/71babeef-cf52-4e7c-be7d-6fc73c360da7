@@ -1,37 +1,50 @@
+import Navigation from '@/components/Navigation'
+import HeroSection from '@/components/HeroSection'
+import AlbumGrid from '@/components/AlbumGrid'
+import UpcomingShows from '@/components/UpcomingShows'
+import AudioPlayer from '@/components/AudioPlayer'
+import Footer from '@/components/Footer'
+
 export const dynamic = 'force-dynamic'
+
+const featuredTrack = {
+  title: 'La Malagueña',
+  artist: 'Mónica Denisse',
+  album: 'Alma Ranchera',
+  src: '/audio/la-malaguena.mp3', // placeholder
+  artwork: '/album-artwork/alma-ranchera.jpg'
+}
 
 export default function Index() {
   return (
-    <div className="min-h-screen flex items-center justify-center">
-      <div className="text-center max-w-2xl px-4">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your App</h1>
-        <p className="text-xl mb-6 text-gray-600">
-          This template is configured to be absolutely lenient - builds never fail on validation errors.
-        </p>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-left">
-          <div className="p-4 bg-green-50 rounded-lg border border-green-200">
-            <h3 className="font-semibold text-green-800 mb-2">✅ Always Builds</h3>
-            <ul className="text-green-700 space-y-1">
-              <li>• TypeScript errors ignored</li>
-              <li>• ESLint warnings ignored</li>
-              <li>• Global error boundaries</li>
-              <li>• Asset type safety</li>
-            </ul>
+    <div className="min-h-screen">
+      <Navigation />
+      <main>
+        <HeroSection />
+        <AlbumGrid />
+
+        {/* Featured Music Section */}
+        <section className="py-16 bg-gradient-to-r from-[hsl(220,60%,20%)] to-[hsl(220,60%,15%)]">
+          <div className="max-w-6xl mx-auto px-4">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-[hsl(42,88%,75%)] mb-4">
+                FEATURED MUSIC
+              </h2>
+              <div className="w-24 h-1 bg-[hsl(42,88%,75%)] mx-auto mb-4"></div>
+              <p className="text-gray-300 max-w-2xl mx-auto">
+                Listen to the latest single from Mónica Denisse
+              </p>
+            </div>
+
+            <div className="flex justify-center">
+              <AudioPlayer track={featuredTrack} />
+            </div>
           </div>
-          <div className="p-4 bg-blue-50 rounded-lg border border-blue-200">
-            <h3 className="font-semibold text-blue-800 mb-2">🚀 Production Ready</h3>
-            <ul className="text-blue-700 space-y-1">
-              <li>• Next.js 15.5.2 App Router</li>
-              <li>• Vercel optimized</li>
-              <li>• SSR/SEO friendly</li>
-              <li>• Browser API protection</li>
-            </ul>
-          </div>
-        </div>
-        <p className="mt-6 text-gray-500">
-          Start building your amazing project here! This template will never fail builds due to validation errors.
-        </p>
-      </div>
+        </section>
+
+        <UpcomingShows />
+      </main>
+      <Footer />
     </div>
   );
 }

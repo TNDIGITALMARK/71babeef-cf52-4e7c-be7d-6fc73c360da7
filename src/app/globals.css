@@ -14,8 +14,9 @@ All colors MUST be HSL.
   --popover: 0 0% 100%;
   --popover-foreground: 222.2 84% 4.9%;
 
-  --primary: 222.2 47.4% 11.2%;
-  --primary-foreground: 210 40% 98%;
+  /* Monica Denisse Brand Colors */
+  --primary: 220 60% 20%; /* Navy blue header */
+  --primary-foreground: 42 88% 75%; /* Gold text */
 
   --secondary: 210 40% 96.1%;
   --secondary-foreground: 222.2 47.4% 11.2%;
@@ -23,8 +24,8 @@ All colors MUST be HSL.
   --muted: 210 40% 96.1%;
   --muted-foreground: 215.4 16.3% 46.9%;
 
-  --accent: 210 40% 96.1%;
-  --accent-foreground: 222.2 47.4% 11.2%;
+  --accent: 42 88% 75%; /* Gold accent */
+  --accent-foreground: 220 60% 20%;
 
   --destructive: 0 84.2% 60.2%;
   --destructive-foreground: 210 40% 98%;
@@ -34,6 +35,13 @@ All colors MUST be HSL.
   --ring: 222.2 84% 4.9%;
 
   --radius: 0.5rem;
+
+  /* Custom Monica Denisse Colors */
+  --monica-navy: 220 60% 20%;
+  --monica-gold: 42 88% 75%;
+  --monica-terracotta: 15 75% 55%;
+  --monica-sage: 85 25% 50%;
+  --monica-warm-white: 35 20% 98%;
 
   --sidebar-background: 0 0% 98%;
   --sidebar-foreground: 240 5.3% 26.1%;
